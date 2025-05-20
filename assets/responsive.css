@@ -1,0 +1,109 @@
+/* Responsive Adjustments */
+
+
+/* Typography scaling for smaller screens */
+@media (max-width: 767.98px) {
+  .gallery-title,
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-text {
+    font-size: 0.85rem;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+  }
+
+  .feature-text {
+    font-size: 0.85rem;
+  }
+
+  .hero-section,
+  .gallery-section,
+  .about-section {
+    height: auto;
+    padding: 160px 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .stat-item {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stat-icon {
+    margin-bottom: 10px;
+  }
+
+  .feature-box {
+    padding: 20px 15px;
+  }
+
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer-phone {
+    font-size: 24px;
+  }
+
+  .btn-primary,
+  .btn-outline-primary,
+  .go-map-btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 575.98px) {
+  .hero-section h1,
+  .hero-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .gallery-grid img {
+    height: 250px;
+  }
+
+  .video-container img {
+    height: auto;
+  }
+
+  .play-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .play-btn i {
+    font-size: 18px;
+  }
+}
+
+/* Adjust stat columns on mobile */
+@media (max-width: 767.98px) {
+  .stats-section .col-md-3 {
+    margin-bottom: 30px;
+  }
+
+  .stats-section .col-md-3:not(:last-child)::after {
+    display: none;
+  }
+}

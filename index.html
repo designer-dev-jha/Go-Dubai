@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Dubai - Explore the Magic</title>
+  <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/responsive.css">
+    <link rel="stylesheet" href="/assets/loader.css">
+    <link rel="stylesheet" href="/assets/home.css">
+
+
+    <!--link  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="font/Jitter DEMO.ttf">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Go Dubai</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">VEHICLES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DRIVERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-light me-2">
+                        <i class="fas fa-user"></i> LOGIN
+                    </a>
+                    <a href="#" class="btn btn-outline-light">
+                        <i class="fas fa-search"></i> SEARCH
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+  <!-- Hero Section -->
+  <!-- <section class="hero-section text-white text-left d-flex flex-column justify-content-left align-items-left">
+    <h2 class="display-5">Explore The Magic Of</h2>
+    <h1 class="display-3 fw-bold">DUBAI</h1>
+    <a href="#" class="btn btn-primary mt-3">Reserve Now</a>
+  </section> -->
+
+  <!-- header -->
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="image/logo.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" onclick="toggleMobileMenu()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active-s" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Vehicles</a></li>
+          <li class="nav-item"><a class="nav-link" href="/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Drivers</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-last">
+        <a href="#" class="nav-link text-white"><img src="image/login icon.png" class="mx-auto" alt=""> Login</a>
+        <a href="#" class="nav-link text-white" onclick="toggleSearch()"><img src="image/search icon.png"
+            class="mx-auto" alt=""> Search</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Vehicles</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Drivers</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#"><img src="image/login icon.png" alt=""> Login</a></li>
+        <li><a href="#" onclick="toggleSearch()"><img src="image/search icon.png" alt=""> Search</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- mobile nabvar js -->
+  <script>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("show-menu");
+    }
+  </script>
+  <!-- Search Popup -->
+  <div id="searchPopup" class="search-popup">
+    <div class="search-box">
+      <div class="close-btn" onclick="toggleSearch()">&times;</div>
+      <h4>Search</h4>
+      <input type="text" class="form-control" placeholder="Search Here......">
+      <button class="btn btn-primary mt-2">Search</button>
+    </div>
+  </div>
+  <script>
+    function toggleSearch() {
+      const searchPopup = document.getElementById("searchPopup");
+      searchPopup.classList.toggle("show");
+    }
+  </script>
+
+  <!-- banner area -->
+
+  <section class="banner-sec">
+    <div class="container">
+      <div class="banner-main-div">
+        <div class="bnr-btn-div">
+          <h1><span class="bnr-span-1">EXPLORE</span><span class="bnr-span-2">THE MAGIC OF</span>DUBAI</h1>
+
+          <a href="#" class="cmn-btn">RESERVE NOW</a>
+        </div>
+
+
+
+
+        <div class="bnr-btm-content">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+              <div class="search-input">
+                <select>
+                  <option>Destination</option>
+                </select>
+                <input type="text" placeholder="Search Destination">
+                <img src="image/bnr-icon-1.png" alt="">
+              </div>
+
+
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+              <div class="search-input">
+                <select>
+                  <option>Check In</option>
+                </select>
+                <input type="text" placeholder="Add Date & Time">
+                <img src="image/bnr-icon-2.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+              <div class="search-input">
+                <select>
+                  <option>Check Out</option>
+                </select>
+                <input type="text" placeholder="Add Date & Time">
+                <img src="image/bnr-icon-2.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+   <!-- packege area -->
+
+  <section class="packege-sec sec-pad">
+    <div class="container">
+      <div class="packege-top-contetn">
+        <h2>Dubai's Bills</h2>
+        <h3>Exclusive Packages You Can’t Miss!</h3>
+        <p>These packages are carefully curated to elevate your trip to Dubai and beyond. So, your dream trips and <br>
+          excursions are just a clic kaway! Now, it’s time for you to explore Dubai tour packages with Travel Saga,<br>
+          your one stop destination for all travel needs and requirements.</p>
+      </div>
+
+      <div class="packege-btn-top">
+        <a href="">All Packege <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="container">
+        <div class="packege-card-container">
+              <div class="packege-card active">
+                <img src="assets/img/packege-1.png" alt="">
+                <div class="packege-card-content text-white">
+                  <div class="packege-card-text d-flex justify-content-between">
+                    <h3>Solo <br> Travellors</h3>
+                    <span>AED 375</span>
+                  </div>
+                  <p>Duration: 4 Days/3 Nights</p>
+                  <ul>
+                    <li>Stay At Luxery Hotel with a Bruj Khalifa View</li>
+                    <li>Gudied city tour with a private photographer </li>
+                    <li>Desert safari with cultural evening</li>
+                    <li>Free entry to sky views dubai or mesume of the future</li>
+                    <li>Complimentary solo brunch at arooftop cafe</li>
+                  </ul>
+                  <div class="packege-btn-div text-center">
+                    <a href="">Lets Journey</a>
+                  </div>
+                </div>
+              </div>
+              <div class="packege-card ">
+                <img src="assets/img/packege-2.png" alt="">
+                <div class="packege-card-content text-white">
+                  <div class="packege-card-text d-flex justify-content-between">
+                    <h3>Couples</h3>
+
+                  </div>
+                  <p>Kyoto is a perfect blend of tradition and modernity.</p>
+
+                  <div class="packege-btn-div text-center">
+                    <a class="packege-btn" href="">More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="packege-card ">
+                <img src="assets/img/packege-3.png" alt="">
+                <div class="packege-card-content text-white">
+                  <div class="packege-card-text d-flex justify-content-between">
+                    <h3>Families</h3>
+
+                  </div>
+                  <p>Kyoto is a perfect blend of tradition and modernity</p>
+
+                  <div class="packege-btn-div text-center">
+                    <a class="packege-btn" href="">More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="packege-card ">
+                <img src="assets/img/packege-4.jpg" alt="">
+                <div class="packege-card-content text-white">
+                  <div class="packege-card-text d-flex justify-content-between">
+                    <h3>Bachelors</h3>
+                  </div>
+                  <p>Kyoto is a perfect blend of tradition and modernity</p>
+
+                  <div class="packege-btn-div text-center">
+                    <a class="packege-btn" href="">More</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <script>
+              const cards = document.querySelectorAll('.packege-card');
+              cards.forEach((card, index) => {
+                card.addEventListener('mouseenter', () => {
+                  document.querySelector('.packege-card.active').classList.remove('active');
+                  card.classList.add('active');
+                });
+              });
+            </script>
+      </div>
+    </div>
+  </section>
+
+  <!--top-attraction area  -->
+
+  <section class="attract-sec sec-btm-pad">
+    <div class="attract-main-div case6 sp3">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="headding6 mb-5">
+              <h2 data-aos="fade-right" data-aos-duration="900">Top Attractions in Dubai</h2>
+              <p>Handicap locaiton for unforgottable experience</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="tes6-buttons" data-aos="fade-left" data-aos-duration="700">
+              <button class="testimonial-prev-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+              <button class="testimonial-next-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="space60"></div>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="case6-slider-all" data-aos="fade-zoom-out" data-aos-duration="1000">
+              <div class="single-slider">
+                <div class="single-slider-img mb-4">
+                  <img src="image/top-1.png" alt="">
+                  <h3>Dubai Desert Safari</h3>
+                  <p>A tropical paradies with breathtaking beaches, lush rice terrace, and rick cultural.</p>
+                  <a href="#" data-text="Request Free Consult" class="theme-btn10">View detail<span
+                      class="arrow ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+                <div class="single-slider-img">
+                  <img src="image/top-5.png" alt="">
+                  <h3>Skydive Dubai</h3>
+                  <p>A futurestic city offering luxury shopping, stunning skyscrapers, and thriling desert adventure.
+                  </p>
+                  <a href="#" data-text="Request Free Consult" class="theme-btn10">View detail<span class="arrow"><i
+                        class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+              </div>
+
+              <div class="single-slider">
+                <div class="single-slider-img mb-4">
+                  <img src="image/top-2.png" alt="">
+                  <h3>Burj Khalifa</h3>
+                  <p>The city of love and lights, knowns for its roamntic ambiance, iconic landmarks, and world-class
+                    cusine.</p>
+                  <a href="#" data-text="Request Free Consult" class="theme-btn10">View detail<span
+                      class="arrow ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+                <div class="single-slider-img">
+                  <img src="image/top-6.png" alt="">
+                  <h3>Mesuem Of the Future</h3>
+                  <p>A breath-taking destination with snow-capped mountains, crystal-clear larks.</p>
+                  <a href="#" data-text="Request Free Consult" class="theme-btn10">View detail<span class="arrow"><i
+                        class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+              </div>
+
+              <div class="single-slider">
+                <div class="single-slider-img mb-4">
+                  <img src="image/top-3.png" alt="">
+                  <h3>Atlantis Aquaventure</h3>
+                  <p>A perfect blend of tradition and modernity, where you can experience ancient tempels.</p>
+                  <a href="#" data-text="Request Free Consult" class="theme-btn10">View detail<span
+                      class="arrow ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+                <div class="single-slider-img mb-4">
+                  <img src="image/top-3.png" alt="">
+                  <h3>Atlantis Aquaventure</h3>
+                  <p>A perfect blend of tradition and modernity, where you can experience ancient tempels.</p>
+                  <a href="#" data-text="Request Free Consult" class="theme-btn10">View detail<span
+                      class="arrow ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+              </div>
+
+
+              <div class="single-slider">
+                <div class="single-slider-img mb-4">
+                  <img src="image/top-4.png" alt="">
+                  <h3>Global Village</h3>
+                  <p>A Mesmerizing island with houses, stunnign blue domes.</p>
+                  <a href="#" data-text="Request Free Consult" class="theme-btn10">View detail<span class="arrow"><i
+                        class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+                <div class="single-slider-img">
+                  <img src="image/top-5.png" alt="">
+                  <h3>Skydive Dubai</h3>
+                  <p>A futurestic city offering luxury shopping, stunning skyscrapers, and thriling desert adventure.
+                  </p>
+                  <a href="#" data-text="Request Free Consult" class="theme-btn10">View detail<span class="arrow"><i
+                        class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- testimonial -->
+
+  <section class="testi-sec">
+    <div class="container">
+      <div class="testi-top-content text-center">
+        <span class="testi-top-sapn ">latest testimonials</span>
+        <h2 class="mt-3">What <span>They Say</span> About US</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="testi-slider">
+        <div class="testimonial">
+          <p>"This was our first time renting from Royal Cars and we were very pleased with the whole experience. Your
+            price was lower than other companies. Our rental experience was good from start to finish, so we’ll be back
+            in the future."</p>
+          <img src="image/testi-1.png" alt="Roberto Garcia" class="avatar">
+          <div class="name">Roberto Garcia</div>
+          <div class="position">MELBOURNE</div>
+        </div>
+        <div class="testimonial">
+          <p>"This was our first time renting from Royal Cars and we were very pleased with the whole experience. Your
+            price was lower than other companies. Our rental experience was good from start to finish, so we’ll be back
+            in the future."</p>
+          <img src="image/testi-1.png" alt="Roberto Garcia" class="avatar">
+          <div class="name">Roberto Garcia</div>
+          <div class="position">MELBOURNE</div>
+        </div>
+        <div class="testimonial">
+          <p>"This was our first time renting from Royal Cars and we were very pleased with the whole experience. Your
+            price was lower than other companies. Our rental experience was good from start to finish, so we’ll be back
+            in the future."</p>
+          <img src="image/testi-1.png" alt="Roberto Garcia" class="avatar">
+          <div class="name">Roberto Garcia</div>
+          <div class="position">MELBOURNE</div>
+        </div>
+      </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+
+
+  <!-- go dubai -->
+
+  <section class="go-sec sec-pad">
+    <div class="container">
+      <div class="go-top-card d-flex flex-wrap">
+        <div class="go-top-main-card-1 text-white justify-content-between">
+          <div class="go-top-main-card-img">
+            <img src="image/go-top-1.png" alt="">
+          </div>
+          <div class="go-top-main-card-text">
+            <span>Family DISCOUNT 50%</span>
+            <h3>Special Offer for holiday</h3>
+          </div>
+        </div>
+        <div class="go-top-main-card-2 text-white justify-content-between">
+          <div class="go-top-main-card-text">
+            <span>SPECIAL OFFER</span>
+            <h3>Rent 3 days and get free insurance.</h3>
+          </div>
+          <div class="go-top-main-card-img">
+            <img src="image/go-top-2.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="go-top-content text-center ">
+        <span>Lets Celebrate With</span>
+        <h2>Go Dubai</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="go-btm-card">
+            <div class="go-btm-card-left">
+              <h4>Luis Henrique</h4>
+              <p>5 years Experience</p>
+            </div>
+            <div class="go-btm-card-right">
+              <img src="image/go-top-1.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="go-btm-card">
+            <div class="go-btm-card-left">
+              <h4>Robertho Gracia</h4>
+              <p>6 years Experience</p>
+            </div>
+            <div class="go-btm-card-right">
+              <img src="image/go-top-1.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="go-btm-card">
+            <div class="go-btm-card-left">
+              <h4>Dabiel Quresima</h4>
+              <p>5 years Experience</p>
+            </div>
+            <div class="go-btm-card-right">
+              <img src="image/go-top-1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="go-btn-div mt-5 text-center "><a href="" class="">VIEW All DRIVER</a></div>
+    </div>
+  </section>
+
+
+  <!-- ask question -->
+
+  <section class="ask-sec sec-pad">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="ask-top-content">
+            <span class="ask-top-span">Find Your answer here</span>
+            <h2>Frequently <span>Ask Question</span></h2>
+          </div>
+
+          <div class="ask-btm-content">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    How to reserved a car here?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    How can i select a car for rent?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Consectetur Delgado?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+
+          <div class="ask-right-div">
+            <div class="mt-4">
+
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+
+                  <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#content1"
+                    type="button" role="tab"><i class="fa-solid fa-user"></i> ABOUT ACCOUNT</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#content2" type="button"
+                    role="tab"><i class="fa-solid fa-circle-question"></i>TECHNICAL SUPPORT</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#content3" type="button"
+                    role="tab"> <i class="fa-solid fa-car"></i>CARS FEATURES</button>
+                </li>
+              </ul>
+
+
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="content1" role="tabpanel">
+                  <div class="accordion" id="accordion1">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne-s" aria-expanded="true">
+                          How to Sign up?
+                        </button>
+                      </h2>
+                      <div id="collapseOne-s" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+                        <div class="accordion-body">Lorem Ipsum is simply dummy text of the printing and typesetting
+                          industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                          an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo-s">
+                          What Happen if i carshed the car?
+                        </button>
+                      </h2>
+                      <div id="collapseTwo-s" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                        <div class="accordion-body">Lorem Ipsum is simply dummy text of the printing and typesetting
+                          industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                          an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree-s">
+                          Set diam?
+                        </button>
+                      </h2>
+                      <div id="collapseThree-s" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                        <div class="accordion-body">Lorem Ipsum is simply dummy text of the printing and typesetting
+                          industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                          an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="content2" role="tabpanel">
+                  <div class="accordion" id="accordion2">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne-s" aria-expanded="true">
+                          How to Sign up?
+                        </button>
+                      </h2>
+                      <div id="collapseOne-s" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+                        <div class="accordion-body">Lorem Ipsum is simply dummy text of the printing and typesetting
+                          industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                          an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="content3" role="tabpanel">
+                  <div class="accordion" id="accordion3">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne-s" aria-expanded="true">
+                          How to Sign up?
+                        </button>
+                      </h2>
+                      <div id="collapseOne-s" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+                        <div class="accordion-body">Lorem Ipsum is simply dummy text of the printing and typesetting
+                          industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                          an unknown printer took a galley of type and scrambled it to make a type specimen book</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ask-btn-div text-center"><a href=""><span class=""><i class="fa-solid fa-circle-question"></i></span>
+          MAKE A QUESTION</a></div>
+    </div>
+  </section>
+
+
+  <!-- promo-sec -->
+
+  <section class="promo-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+          <div class="promo-main">
+            <div class="promo-img">
+              <img src="image/promo-1.png" alt="">
+
+            </div>
+            <div class="promo-text text-white">
+              <h2>1.172.700</h2>
+              <p>Happy Customer</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+          <div class="promo-main">
+            <div class="promo-img">
+              <img src="image/promo-2.png" alt="">
+
+            </div>
+            <div class="promo-text text-white">
+              <h2>2.450</h2>
+              <p>cars in garage</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+          <div class="promo-main">
+            <div class="promo-img">
+              <img src="image/promo-3.png" alt="">
+
+            </div>
+            <div class="promo-text text-white">
+              <h2>1.211.100</h2>
+              <p>total kilometer/mil</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+          <div class="promo-main">
+            <div class="promo-img">
+              <img src="image/promo-3.png" alt="">
+
+            </div>
+            <div class="promo-text text-white">
+              <h2>47.250</h2>
+              <p>car center soluation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- blog area -->
+
+  <section class="blog-sec sec-pad">
+    <div class="container">
+      <div class="blog-top-content text-center">
+        <span>articales from blog</span>
+        <h2>Our Latest News</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="bolg-card">
+            <div class="blog-img mb-3">
+              <img src="image/blog-1.png" alt="">
+            </div>
+            <div class="blog-text">
+              <span class="text-white">27 JUNE 2018</span>
+              <h3 class="text-white">What To Do Your Rental Car Has Met With An Accident.</h3>
+              <a href="">READ ARTICAL</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="bolg-card">
+            <div class="blog-img mb-3">
+              <img src="image/blog-2.png" alt="">
+            </div>
+            <div class="blog-text">
+              <span class="text-white">27 JUNE 2018</span>
+              <h3 class="text-white">What To Do Your Rental Car Has Met With An Accident.</h3>
+              <a href="">READ ARTICAL</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="bolg-card">
+            <div class="blog-img mb-3">
+              <img src="image/blog-3.png" alt="">
+            </div>
+            <div class="blog-text">
+              <span class="text-white">27 JUNE 2018</span>
+              <h3 class="text-white">What To Do Your Rental Car Has Met With An Accident.</h3>
+              <a href="">READ ARTICAL</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="line-div"
+        style="background-color: #192c42; width: 100%; height: 2px; margin-top: 30px; margin-bottom: 30px;"></div>
+      <div class="blog-link-div text-center">
+        <a href=""><img class="mb-3" src="image/insta.png" alt=""></a>
+        <p>Follow Our Instagram<span> #Go Dubai</span></p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- gallery -->
+
+  <section class="gallery-sec">
+    <div class="glry-row d-flex">
+      <div class="cols">
+        <div class="image-card">
+          <img src="image/glry-1.png" alt="Image Card">
+          <div class="overlay">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <div class="cols">
+        <div class="image-card">
+          <img src="image/glry-2.png" alt="Image Card">
+          <div class="overlay">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <div class="cols">
+        <div class="image-card">
+          <img src="image/glry-3.png" alt="Image Card">
+          <div class="overlay">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <div class="cols">
+        <div class="image-card">
+          <img src="image/glry-4.png" alt="Image Card">
+          <div class="overlay">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <div class="cols">
+        <div class="image-card">
+          <img src="image/glry-5.png" alt="Image Card">
+          <div class="overlay">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 pe-4">
+                    <h2 class="font-syne">Go Dubai</h2>
+                    <p class="text-muted">We know the difference is in the details and that's why we offer car rental services. In the tourism and business industry, stand out for their quality.</p>
+                    <div class="input-group mb-3 pe-4">
+                        <input type="text" class="form-control" placeholder="Subscribe Newsletter">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="mb-4">
+                        <p class="footer-text mb-1">
+                            <i class="ri-smartphone-line"></i>
+                            CALL US ON LINE 1
+                        </p>
+                        <p class="footer-phone">100.1212.2000</p>
+                    </div>
+                    <h5 class="mb-3">USEFUL LINK</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Privacy Policy</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Term & Conditions</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Copyright Notification</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Register for New Member</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Press Release</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="mb-4">
+                        <p class="footer-text mb-1">
+                            <i class="ri-smartphone-line"></i>
+                            CALL US ON LINE 2
+                        </p>
+                        <p class="footer-phone">100.2424.2000</p>
+                    </div>
+                    <h5 class="mb-3">OUR INFO</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>About Rental Cars</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Our Mission & Strategy</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Our Vision</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Extra Care Advantages</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <a href="#" class="go-map-btn d-flex align-items-center justify-content-between mb-4">
+                        <span>Go Map</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                    <h5 class="mb-3 mt-5">ACCOUNT INFORMATION</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Login to My Account</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Press Releases</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>User Dashboard</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Email Address</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Lorem ipsum dolor sit</a></li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="d-flex flex-wrap justify-content-between align-items-center mt-4 pt-4 border-top gap-3">
+                <small class="text-muted">© Copyright 2025 - All Rights Reserved</small>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                </div>
+                <small class="text-muted text-end">Built by Go Dubai | Created for Web Service</small>
+            </div>
+
+        </div>
+    </footer>
+
+    
+  <!-- js link -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+
+
+
+  <script>
+
+    $(document).ready(function () {
+      $(".case6-slider-all").slick({
+        margin: "30",
+        slidesToShow: 3,
+        arrows: true,
+        centerMode: true,
+        loop: true,
+        centerMode: false,
+        prevArrow: $(".testimonial-prev-arrow"),
+        nextArrow: $(".testimonial-next-arrow"),
+        draggable: true,
+        centerPadding: "10px",
+        dots: false,
+        scroll: true,
+        responsive: [
+          {
+            breakpoint: 769,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "20px",
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "40px",
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+
+
+
+
+
+      $('.testi-slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        adaptiveHeight: true,
+        prevArrow: '<button class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow: '<button class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+      });
+
+
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

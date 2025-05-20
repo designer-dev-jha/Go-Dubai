@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Dubai - Gallery</title>
+   <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/responsive.css">
+    <link rel="stylesheet" href="/assets/loader.css">
+    <link rel="stylesheet" href="/assets/home.css">
+
+
+    <!--link  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="font/Jitter DEMO.ttf">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Go Dubai</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">VEHICLES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DRIVERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-light me-2">
+                        <i class="fas fa-user"></i> LOGIN
+                    </a>
+                    <a href="#" class="btn btn-outline-light">
+                        <i class="fas fa-search"></i> SEARCH
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- header -->
+
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="image/logo.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" onclick="toggleMobileMenu()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Vehicles</a></li>
+          <li class="nav-item"><a class="nav-link" href="/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Drivers</a></li>
+          <li class="nav-item"><a class="nav-link active-s" href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-last">
+        <a href="#" class="nav-link text-white"><img src="image/login icon.png" class="mx-auto" alt=""> Login</a>
+        <a href="#" class="nav-link text-white" onclick="toggleSearch()"><img src="image/search icon.png"
+            class="mx-auto" alt=""> Search</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Vehicles</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Drivers</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#"><img src="image/login icon.png" alt=""> Login</a></li>
+        <li><a href="#" onclick="toggleSearch()"><img src="image/search icon.png" alt=""> Search</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- mobile nabvar js -->
+  <script>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("show-menu");
+    }
+  </script>
+  <!-- Search Popup -->
+  <div id="searchPopup" class="search-popup">
+    <div class="search-box">
+      <div class="close-btn" onclick="toggleSearch()">&times;</div>
+      <h4>Search</h4>
+      <input type="text" class="form-control" placeholder="Search Here......">
+      <button class="btn btn-primary mt-2">Search</button>
+    </div>
+  </div>
+  <script>
+    function toggleSearch() {
+      const searchPopup = document.getElementById("searchPopup");
+      searchPopup.classList.toggle("show");
+    }
+  </script>
+
+    <!-- Contact Section with Hot Air Balloon -->
+    <section class="contact-hero-section">
+        <div class="hero-overlay"></div>
+        <div class="balloon-container">
+            <h1 class="font-syne gallery-title">Contact Us</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-custom justify-content-center">
+                    <li class="breadcrumb-item"><a href="#">HOME</a></li>
+                    <li class="breadcrumb-item active">Contact US</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container py-5">
+        <div class="row justify-content-center">
+            <div class="row mt-5">
+                <div class="col-md-6 text-md-start">
+                    <p class="subtitle">OUR OFFICE</p>
+                    <h2 class="font-syne section-title mb-4">Contact <span>Go Dubai</span> for More Information.</h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="container pb-5">
+            <div class="row g-4 mb-5">
+                <!-- Main Office -->
+                <div class="col-md-6 pb-4">
+                    <h5 class="mb-3">Main Office</h5>
+                    <div class="office-card">
+                        <img src="/assets/img/loc-1.png" class="office-image" alt="Dubai Main Office">
+                        <div class="contact-info mt-3">
+                            <p class="mb-2">
+                                <i class="ri-map-pin-2-fill me-2"></i>
+                                320 Pennsylvania EV, USA
+                            </p>
+                            <hr class="my-3">
+                            <p class="mb-2">
+                                <i class="ri-phone-fill me-2"></i>
+                                +100-123-2000
+                            </p>
+                            <hr class="my-3">
+                            <p class="mb-0">
+                                <i class="ri-mail-fill me-2"></i>
+                                info@godubai.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Office -->
+                <div class="col-md-6 pb-4">
+                    <h5 class="mb-3">Other Office</h5>
+                    <div class="office-card">
+                        <img src="/assets/img/loc-2.png" class="office-image" alt="Dubai Other Office">
+                        <div class="contact-info">
+                            <p class="mb-2">
+                                <i class="ri-map-pin-2-fill me-2"></i>
+                                320 Pennsylvania EV, USA
+                            </p>
+                            <hr class="my-3">
+                            <p class="mb-2">
+                                <i class="ri-phone-fill me-2"></i>
+                                +100-123-2000
+                            </p>
+                            <hr class="my-3">
+                            <p class="mb-0">
+                                <i class="ri-mail-fill me-2"></i>
+                                info@godubai.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="position-relative">
+        <div class="map-container" style="position: relative; overflow: hidden; width: 100%; height: 580px;">
+            <iframe 
+            width="100%" 
+            height="580px" 
+            frameborder="0" 
+            scrolling="no" 
+            marginheight="0" 
+            marginwidth="0" 
+            style="object-fit: cover; border: 0;" 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=77.5946%2C12.9716%2C77.6006%2C12.9756&layer=mapnik"
+            ></iframe>
+            
+            <!-- Map Markers -->
+            <div class="yellow-circle" style="top: 50%; left: 35%;">
+                01
+            </div>
+            <div class="yellow-circle" style="top: 30%; left: 65%;">
+                02
+            </div>
+            <div class="yellow-circle" style="top: 70%; left: 15%;">
+                03
+            </div>
+            <div class="yellow-circle" style="top: 60%; left: 80%;">
+                04
+            </div>
+            
+            <!-- Info Card -->
+            <div class="office-info-card" style="bottom: 100px; left: 50%; transform: translateX(-50%);">
+                <img src="/assets/img/loc-2.png" class="office-map" alt="Dubai Other Office">
+                <div class="loc-text m-4">
+                    <p class="mb-2">
+                        <i class="ri-map-pin-2-fill loc-icon"></i>
+                        320 Pennsylvania EV, USA
+                    </p>
+                    <p class="mb-2">
+                        <i class="ri-smartphone-fill loc-icon"></i>
+                        +100-123-2000
+                    </p>
+                    <p class="mb-0">
+                        <i class="ri-mail-fill loc-icon"></i>
+                        info@godubai.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-overlay"></div>
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <p class="text-uppercase mb-1">CONTACT US NOW</p>
+                    <h2 class="font-syne display-5 fw-bold">Keep In Touch</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="User name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Title Message">
+                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                        <button type="submit" class="btn-submit">SEND MESSAGE NOW</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 pe-4">
+                    <h2 class="font-syne">Go Dubai</h2>
+                    <p class="text-muted">We know the difference is in the details and that's why we offer car rental services. In the tourism and business industry, stand out for their quality.</p>
+                    <div class="input-group mb-3 pe-4">
+                        <input type="text" class="form-control" placeholder="Subscribe Newsletter">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="mb-4">
+                        <p class="footer-text mb-1">
+                            <i class="ri-smartphone-line"></i>
+                            CALL US ON LINE 1
+                        </p>
+                        <p class="footer-phone">100.1212.2000</p>
+                    </div>
+                    <h5 class="mb-3">USEFUL LINK</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Privacy Policy</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Term & Conditions</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Copyright Notification</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Register for New Member</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Press Release</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="mb-4">
+                        <p class="footer-text mb-1">
+                            <i class="ri-smartphone-line"></i>
+                            CALL US ON LINE 2
+                        </p>
+                        <p class="footer-phone">100.2424.2000</p>
+                    </div>
+                    <h5 class="mb-3">OUR INFO</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>About Rental Cars</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Our Mission & Strategy</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Our Vision</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Extra Care Advantages</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <a href="#" class="go-map-btn d-flex align-items-center justify-content-between mb-4">
+                        <span>Go Map</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                    <h5 class="mb-3 mt-5">ACCOUNT INFORMATION</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Login to My Account</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Press Releases</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>User Dashboard</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Email Address</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Lorem ipsum dolor sit</a></li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="d-flex flex-wrap justify-content-between align-items-center mt-4 pt-4 border-top gap-3">
+                <small class="text-muted">© Copyright 2025 - All Rights Reserved</small>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                </div>
+                <small class="text-muted text-end">Built by Go Dubai | Created for Web Service</small>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Dubai - Gallery</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/responsive.css">
+    <link rel="stylesheet" href="/assets/loader.css">
+    <link rel="stylesheet" href="/assets/home.css">
+
+
+    <!--link  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="font/Jitter DEMO.ttf">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Go Dubai</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">VEHICLES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DRIVERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-light me-2">
+                        <i class="fas fa-user"></i> LOGIN
+                    </a>
+                    <a href="#" class="btn btn-outline-light">
+                        <i class="fas fa-search"></i> SEARCH
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="image/logo.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" onclick="toggleMobileMenu()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Vehicles</a></li>
+          <li class="nav-item"><a class="nav-link active-s" href="/gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Drivers</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="nav-last">
+        <a href="#" class="nav-link text-white"><img src="image/login icon.png" class="mx-auto" alt=""> Login</a>
+        <a href="#" class="nav-link text-white" onclick="toggleSearch()"><img src="image/search icon.png"
+            class="mx-auto" alt=""> Search</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Vehicles</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Drivers</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#"><img src="image/login icon.png" alt=""> Login</a></li>
+        <li><a href="#" onclick="toggleSearch()"><img src="image/search icon.png" alt=""> Search</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- mobile nabvar js -->
+  <script>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("show-menu");
+    }
+  </script>
+  <!-- Search Popup -->
+  <div id="searchPopup" class="search-popup">
+    <div class="search-box">
+      <div class="close-btn" onclick="toggleSearch()">&times;</div>
+      <h4>Search</h4>
+      <input type="text" class="form-control" placeholder="Search Here......">
+      <button class="btn btn-primary mt-2">Search</button>
+    </div>
+  </div>
+  <script>
+    function toggleSearch() {
+      const searchPopup = document.getElementById("searchPopup");
+      searchPopup.classList.toggle("show");
+    }
+  </script>
+
+    <!-- Hero Section with Hot Air Balloon -->
+    <section class="gallery-section">
+        <div class="hero-overlay"></div>
+        <div class="balloon-container">
+            <h1 class="gallery-title">Gallery</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-custom justify-content-center">
+                    <li class="breadcrumb-item"><a href="#">HOME</a></li>
+                    <li class="breadcrumb-item active">PHOTO GALLERY</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="container py-5">
+        <div class="row gallery-grid py-5">
+            <div class="col-md-4 px-1">
+                <img src="/assets/img/gp-1.png" alt="Tourist in Dubai" class="img-fluid">
+            </div>
+            <div class="col-md-4 px-1">
+                <img src="/assets/img/gp-2.png" alt="Couple walking on beach" class="img-fluid">
+            </div>
+            <div class="col-md-4 px-1">
+                <img src="/assets/img/gp-3.png" alt="Family at beach" class="img-fluid">
+            </div>
+            <div class="col-md-4 px-1">
+                <img src="/assets/img/gp-4.png" alt="Couple enjoying view" class="img-fluid">
+            </div>
+            <div class="col-md-4 px-1">
+                <img src="/assets/img/gp-5.png" alt="Couple looking at Burj Khalifa" class="img-fluid">
+            </div>
+            <div class="col-md-4 px-1">
+                <img src="/assets/img/gp-6.png" alt="Woman in red dress" class="img-fluid">
+            </div>
+            <div class="col-md-4 px-1">
+                <img src="/assets/img/gp-7.png" alt="Couple taking selfie" class="img-fluid">
+            </div>
+            <div class="col-md-4 px-1">
+                <img src="/assets/img/gp-8.png" alt="Dubai Marina" class="img-fluid">
+            </div>
+            <div class="col-md-4 px-1">
+                <img src="/assets/img/gp-9.png" alt="Dubai Creek with boat" class="img-fluid">
+            </div>
+        </div>
+        <!-- Pagination/Load More -->
+        <div class="loader-wrapper mt-4">
+            <div class="loader text-muted" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="text-center" style="font-weight: 600;" role="status">
+                <p class="mt-5">Reload More</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-overlay"></div>
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <p class="text-uppercase mb-1">CONTACT US NOW</p>
+                    <h2 class="display-5 fw-bold">Keep In Touch</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="User name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Title Message">
+                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                        <button type="submit" class="btn-submit">SEND MESSAGE NOW</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 pe-4">
+                    <h2 class="font-syne">Go Dubai</h2>
+                    <p class="text-muted">We know the difference is in the details and that's why we offer car rental services. In the tourism and business industry, stand out for their quality.</p>
+                    <div class="input-group mb-3 pe-4">
+                        <input type="text" class="form-control" placeholder="Subscribe Newsletter">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="mb-4">
+                        <p class="footer-text mb-1">
+                            <i class="ri-smartphone-line"></i>
+                            CALL US ON LINE 1
+                        </p>
+                        <p class="footer-phone">100.1212.2000</p>
+                    </div>
+                    <h5 class="mb-3">USEFUL LINK</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Privacy Policy</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Term & Conditions</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Copyright Notification</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Register for New Member</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Press Release</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="mb-4">
+                        <p class="footer-text mb-1">
+                            <i class="ri-smartphone-line"></i>
+                            CALL US ON LINE 2
+                        </p>
+                        <p class="footer-phone">100.2424.2000</p>
+                    </div>
+                    <h5 class="mb-3">OUR INFO</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>About Rental Cars</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Our Mission & Strategy</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Our Vision</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Extra Care Advantages</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <a href="#" class="go-map-btn d-flex align-items-center justify-content-between mb-4">
+                        <span>Go Map</span>
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                    <h5 class="mb-3 mt-5">ACCOUNT INFORMATION</h5>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Login to My Account</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Press Releases</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>User Dashboard</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Email Address</a></li>
+                        <li><a href="#"><i class="ri-arrow-right-s-fill me-2"></i>Lorem ipsum dolor sit</a></li>
+                    </ul>
+                </div>
+            </div>            
+            <div class="d-flex flex-wrap justify-content-between align-items-center mt-4 pt-4 border-top gap-3">
+                <small class="text-muted">© Copyright 2025 - All Rights Reserved</small>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                </div>
+                <small class="text-muted text-end">Built by Go Dubai | Created for Web Service</small>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
