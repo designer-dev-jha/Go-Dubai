@@ -546,7 +546,7 @@ body {
 }
 
 .packege-card {
-  width: 204px;
+  width: 210px;
   height: auto;
   background-color: var(--head-color);
   color: white;
@@ -593,7 +593,7 @@ body {
 }
 
 .packege-card.active {
-  width: 420px;
+  width: 400px;
 }
 
 /* .packege-card:hover {
