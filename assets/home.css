@@ -297,6 +297,9 @@ body {
   .mobile-nav.active {
     display: flex;
   }
+  .navbar {
+  backdrop-filter: none;
+}
 }
 
 
