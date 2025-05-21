@@ -83,7 +83,8 @@ body {
 /* header */
 
 .navbar {
-  background: linear-gradient(135deg, rgb(0 0 0 / 28%), rgb(0 0 0 / 39%));
+  background: linear-gradient(135deg, rgb(0 0 0 / 30%), rgb(0 0 0 / 40%));
+  backdrop-filter: blur(20px);
   padding: 20px 0;
 }
 
@@ -1376,7 +1377,7 @@ body {
 }
 
 .blog-text a {
-  color: #434c55;
+  color: #097aff;
   text-decoration: underline;
   font-size: 16px;
   font-weight: 500;
